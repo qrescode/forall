@@ -1,3 +1,6 @@
+import java.io.ByteArrayInputStream;
+import java.io.FileInputStream;
+import java.io.InputStream;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -10,6 +13,7 @@ public class Main {
         for(int i = 4; i < 4; i++){
             System.out.println(i);
         }
+        InputStream in = new FileInputStream("d");
 
     }
 }
