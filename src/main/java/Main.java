@@ -7,6 +7,9 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("r");
         //sedrfytgiuyhij
+        for(int i = 4; i < 4; i++){
+            System.out.println(i);
+        }
 
     }
 }
