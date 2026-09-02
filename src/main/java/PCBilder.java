@@ -1,14 +1,13 @@
 public class PCBilder {
-    private String cpu = "i5";
+    private String cpu;
     private int ram = 8;
     private int ssd = 256;
     private String gpu = "rtx 2060 super";
     private boolean wifi;
     private boolean bluetooth;
 
-    public PCBilder setCpu(String cpu) {
+    public PCBilder(String cpu){
         this.cpu = cpu;
-        return this;
     }
 
     public PCBilder setGpu(String gpu) {
