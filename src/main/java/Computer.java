@@ -7,13 +7,13 @@ public class Computer {
     private final boolean bluetooth;
 
 
-    public Computer(String cpu, int ram, int ssd, String gpu, boolean wifi, boolean bluetooth) {
-        this.cpu = cpu;
-        this.ram = ram;
-        this.ssd = ssd;
-        this.gpu = gpu;
-        this.wifi = wifi;
-        this.bluetooth = bluetooth;
+    public Computer(PCBilder pcb) {
+        this.cpu = pcb.getCpu();
+        this.ram =  pcb.getRam();
+        this.ssd =  pcb.getSsd();
+        this.gpu =  pcb.getGpu();
+        this.wifi =  pcb.getWifi();
+        this.bluetooth =  pcb.getBluetooth();
     }
 
     public void getC(){

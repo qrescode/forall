@@ -36,6 +36,31 @@ public class PCBilder {
     }
 
     public Computer build(){
-        return new Computer(cpu, ram, ssd, gpu, wifi, bluetooth);
+        return new Computer(this);
     }
+
+    public int getRam() {
+        return ram;
+    }
+
+    public int getSsd() {
+        return ssd;
+    }
+
+    public String getCpu() {
+        return cpu;
+    }
+
+    public String getGpu() {
+        return gpu;
+    }
+
+    public boolean getWifi() {
+        return wifi;
+    }
+
+    public boolean getBluetooth() {
+        return bluetooth;
+    }
+
 }
