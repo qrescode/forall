@@ -8,6 +8,9 @@ public class Main {
             while ((b = in.read()) != -1){
                 System.out.println((char)b);
                 //fff
+                System.out.println("D");
+                //sdgnsng'sg
+                //adadad
             }
         } catch (Exception e) {
             throw new RuntimeException(e);
