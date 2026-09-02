@@ -3,15 +3,7 @@ import java.io.InputStream;
 
 public class Main {
     public static void main(String[] args) {
-        try(InputStream in = new FileInputStream("db.txt")){
-            int b;
-            while ((b = in.read()) != -1){
-                if(b == 56){
-                    System.out.println("e");
-                }
-            }
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+        Computer c = new PCBilder().setCpu("i9").build();
+        c.getC();
     }
 }
