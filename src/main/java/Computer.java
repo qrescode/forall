@@ -6,14 +6,13 @@ public class Computer {
     private final boolean wifi;
     private final boolean bluetooth;
 
-
-    public Computer(PCBilder pcb) {
-        this.cpu = pcb.getCpu();
-        this.ram =  pcb.getRam();
-        this.ssd =  pcb.getSsd();
-        this.gpu =  pcb.getGpu();
-        this.wifi =  pcb.getWifi();
-        this.bluetooth =  pcb.getBluetooth();
+    private Computer(PCBuilder pcb) {
+        this.cpu = pcb.cpu;
+        this.ram =  pcb.ram;
+        this.ssd =  pcb.ssd;
+        this.gpu =  pcb.gpu;
+        this.wifi =  pcb.wifi;
+        this.bluetooth =  pcb.bluetooth;
     }
 
     public void getC(){
@@ -23,5 +22,47 @@ public class Computer {
         System.out.println("gpu = " + gpu);
         System.out.println("wifi = " + wifi);
         System.out.println("bluetooth = " + bluetooth);
+    }
+
+    static class PCBuilder {
+        private String cpu;
+        private int ram = 8;
+        private int ssd = 256;
+        private String gpu = "rtx 2060 super";
+        private boolean wifi;
+        private boolean bluetooth;
+
+        public PCBuilder(String cpu){
+            this.cpu = cpu;
+        }
+
+        public PCBuilder setGpu(String gpu) {
+            this.gpu = gpu;
+            return this;
+        }
+
+        public PCBuilder setBluetooth(boolean bluetooth) {
+            this.bluetooth = bluetooth;
+            return this;
+        }
+
+        public PCBuilder setRam(int ram) {
+            this.ram = ram;
+            return this;
+        }
+
+        public PCBuilder setSsd(int ssd) {
+            this.ssd = ssd;
+            return this;
+        }
+
+        public PCBuilder setWifi(boolean wifi) {
+            this.wifi = wifi;
+            return this;
+        }
+
+        public Computer build(){
+            return new Computer(this);
+        }
     }
 }
