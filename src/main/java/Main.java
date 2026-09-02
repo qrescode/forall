@@ -6,11 +6,9 @@ public class Main {
         try(InputStream in = new FileInputStream("db.txt")){
             int b;
             while ((b = in.read()) != -1){
-                System.out.println((char)b);
-                //fff
-                System.out.println("D");
-                //sdgnsng'sg
-                //adadad
+                if(b == 56){
+                    System.out.println("e");
+                }
             }
         } catch (Exception e) {
             throw new RuntimeException(e);
